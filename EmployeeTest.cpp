@@ -28,7 +28,7 @@ int main() {
 
    // PartTimeEmployee ptemp;
 
-   Employee em;   
+   //Employee em;   
 
    cout << "Are salariedEmployee and commissionEmployee equal? " << ((commissionEmployee == salariedEmployee)?"Yes":"No") << endl;
    cout << endl;
