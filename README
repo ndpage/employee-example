@@ -1,0 +1,4 @@
+# C++ Class Example - Employee
+
+## Employee base class
+The employee abstract base class provides the foundation for the derived classes: SalariedEmployee, ComissionEmployee, and BasePlusComissionEmployee
