@@ -15,7 +15,7 @@ $(TARGET): $(TARGET).o $(OBJS)
 	$(CXX) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f *.o $(TARGET)
 
 
 # EmployeeTest:	BasePlusCommissionEmployee.cpp BasePlusCommissionEmployee.h CommissionEmployee.cpp CommissionEmployee.h Employee.cpp Employee.h EmployeeTest.cpp SalariedEmployee.cpp SalariedEmployee.h
