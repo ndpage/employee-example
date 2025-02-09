@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void virtualViaPointer(const Employee* const); // prototype
+void virtualViaPointer(Employee* const); // prototype
 void virtualViaReference(const Employee&); // prototype
 
 int main() {
@@ -55,7 +55,7 @@ int main() {
    // and earnings using dynamic binding
    cout << "VIRTUAL FUNCTION CALLS MADE OFF BASE-CLASS POINTERS\n";
 
-   for (const Employee* employeePtr : employees) {
+   for (Employee* employeePtr : employees) {
       virtualViaPointer(employeePtr);
    }
 
@@ -70,7 +70,11 @@ int main() {
 
 // call Employee virtual functions toString and earnings off a   
 // base-class pointer using dynamic binding                   
-void virtualViaPointer(const Employee* const baseClassPtr) {
+void virtualViaPointer(Employee* const baseClassPtr) {
+   SalariedEmployee* salPtr = dynamic_cast<SalariedEmployee*>(baseClassPtr);
+   if (salPtr != nullptr){
+      cout << "This is the SalariedEmploye: " << endl;
+   }
    cout << baseClassPtr->toString()
       << "\nearned $" << baseClassPtr->earnings() << "\n\n";
 }
